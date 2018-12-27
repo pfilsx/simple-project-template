@@ -1,0 +1,26 @@
+{
+    "name": "pfilsx/project_template",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pavel",
+            "email": "pfilsx@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "pfilsx/db-broker" : "*",
+        "pfilsx/simply": "*"
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/pfilsx/db-broker.git"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/pfilsx/simply.git"
+        }
+    ]
+}

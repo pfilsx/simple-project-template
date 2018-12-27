@@ -1,0 +1,108 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "28469a9c818d1c474d504f0b1a1c9158",
+    "packages": [
+        {
+            "name": "pfilsx/db-broker",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pfilsx/db-broker.git",
+                "reference": "27017debc169c760e1225d6359df814566cb0f70"
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "pfilsx\\db_broker\\": ""
+                }
+            },
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "pfilsx Pavel",
+                    "email": "pfilsx@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Yii2 authors",
+                    "homepage": "https://www.yiiframework.com/",
+                    "role": "Source"
+                }
+            ],
+            "description": "QueryBuilder interface",
+            "homepage": "https://github.com/pfilsx/db-broker",
+            "keywords": [
+                "mysql",
+                "oracle",
+                "pgsql",
+                "query builder"
+            ],
+            "support": {
+                "issues": "https://github.com/pfilsx/db-broker/issues",
+                "source": "https://github.com/pfilsx/db-broker"
+            },
+            "time": "2018-12-27T08:59:37+00:00"
+        },
+        {
+            "name": "pfilsx/simply",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pfilsx/simply.git",
+                "reference": "3264bd4a00c4b44c415f85372b900b1018af4c34"
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "type": "extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "pfilsx\\simply\\": "src/"
+                }
+            },
+            "license": [
+                "GPLv2"
+            ],
+            "authors": [
+                {
+                    "name": "Pavel Filimonov",
+                    "email": "pfilsx@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Simple flexible PHP template engine.",
+            "homepage": "https://github.com/pfilsx/simply",
+            "keywords": [
+                "php",
+                "template engine"
+            ],
+            "support": {
+                "source": "https://github.com/pfilsx/simply",
+                "issues": "https://github.com/pfilsx/simply/issues"
+            },
+            "time": "2018-12-06T14:21:10+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
