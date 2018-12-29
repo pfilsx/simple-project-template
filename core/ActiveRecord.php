@@ -161,11 +161,11 @@ class ActiveRecord extends Model
 
     /**
      * @param array $params
-     * @return \pfilsx\db_broker\Query
+     * @return \app\core\ActiveQuery
      */
     public static function find($params = []){
-        $query = static::getDb()->createQuery();
-        $query->select('*')->from(static::getTableName());
+        $query = new ActiveQuery(['db' => static::getDb()]);
+        $query->setModel(get_called_class())->select('*')->from(static::getTableName());
         if (!empty($params)){
             $query->where($params);
         }
@@ -177,22 +177,7 @@ class ActiveRecord extends Model
      * @return static[] an array of ActiveRecord instances, or an empty array if nothing matches
      */
     public static function findAll($params = []){
-        $data = static::find($params)->all();
-        $result = [];
-        if (is_array($data) && !empty($data)){
-            foreach ($data as $value){
-                $className = get_called_class();
-                /**
-                 * @var ActiveRecord $model
-                 */
-                $model = new $className();
-                $model->load($value);
-                $model->oldAttributes = [];
-                $model->isNewRecord = false;
-                $result[] = $model;
-            }
-        }
-        return $result;
+        return static::find($params)->all();
     }
 
     /**
@@ -207,20 +192,12 @@ class ActiveRecord extends Model
         } else {
             return null;
         }
-        $data = $query->one();
-        if (is_array($data) && !empty($data)){
-            /**
-             * @var ActiveRecord $model
-             */
-            $className = get_called_class();
-            $model = new $className($data[0]);
-            $model->oldAttributes = [];
-            $model->isNewRecord = false;
-            return $model;
-        }
-        return null;
+        return $query->one();
     }
 
+    public function clearOldAttributes(){
+        $this->oldAttributes = [];
+    }
 
     public static function getTableSchema()
     {
